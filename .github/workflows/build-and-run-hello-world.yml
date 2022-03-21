@@ -22,7 +22,7 @@ jobs:
           pod install
       - name: Build
         run: |
-          xcodebuild -workspace HelloWorld.xcworkspace -scheme HelloWorld CONFIGURATION_BUILD_DIR=`pwd`/build clean build
+          xcodebuild -workspace HelloWorld.xcworkspace -scheme HelloWorld -derivedDataPath `pwd`/build -IDECustomBuildProductsPath="" -IDECustomBuildIntermediatesPath=""  clean build
       - name: Run
         run: |
-          build/HelloWorld 
+          ./build/Build/Products/Debug/HelloWorld
