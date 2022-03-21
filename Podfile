@@ -6,5 +6,6 @@ target 'HelloWorld' do
   use_frameworks!
 
   # Pods for HelloWorld
+  pod 'Alamofire', '5.5.0' # Used for all "modern" API interfacing. Possible refactor to use URLSession etc. may allow this to be removed.
 
 end
