@@ -24,4 +24,4 @@ jobs:
           xcodebuild -workspace HelloWorld.xcworkspace -scheme HelloWorld CONFIGURATION_BUILD_DIR=`pwd`/build clean build | xcpretty && exit ${PIPESTATUS[0]}
       - name: Run
         run: |
-          ./build/Build/Products/Debug/HelloWorld 
+          ./build/HelloWorld 
