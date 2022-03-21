@@ -7,11 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C63662627E843D0008AA732 /* Pods_HelloWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7D613CE1FA9B311A910993 /* Pods_HelloWorld.framework */; };
+		7C63662727E843D0008AA732 /* Pods_HelloWorld.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7D613CE1FA9B311A910993 /* Pods_HelloWorld.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7C9DEE1327E82BE0007B416B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEE1227E82BE0007B416B /* main.swift */; };
-		A322AA752484C5E55B0EE810 /* Pods_HelloWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7D613CE1FA9B311A910993 /* Pods_HelloWorld.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		7C63662827E843D0008AA732 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7C63662727E843D0008AA732 /* Pods_HelloWorld.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7C9DEE0D27E82BE0007B416B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -36,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A322AA752484C5E55B0EE810 /* Pods_HelloWorld.framework in Frameworks */,
+				7C63662627E843D0008AA732 /* Pods_HelloWorld.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +95,6 @@
 				4962E852281DEB212E108DFE /* Pods-HelloWorld.debug.xcconfig */,
 				A28EF9A0B430C59BDBBBD553 /* Pods-HelloWorld.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -98,6 +109,7 @@
 				7C9DEE0B27E82BE0007B416B /* Sources */,
 				7C9DEE0C27E82BE0007B416B /* Frameworks */,
 				7C9DEE0D27E82BE0007B416B /* CopyFiles */,
+				7C63662827E843D0008AA732 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
