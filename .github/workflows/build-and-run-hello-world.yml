@@ -20,7 +20,7 @@ jobs:
           export PATH=$GEM_HOME/bin:$PATH
           gem install cocoapods --user-install
           gem which cocoapods
-          pod --version 
+          pod install
           xcodebuild clean build -project HelloWorld.xcodeproj | xcpretty && exit ${PIPESTATUS[0]}
       - name: Run
         run: |
