@@ -14,13 +14,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Build
+      - name: Tools
         run: |
           export GEM_HOME=$HOME/.gem
-          export PATH=$GEM_HOME/bin:$PATH
+          export PATH=$GEM_HOME/bin:$GEM_HOME/ruby/2.7.0/bin:$PATH
           gem install cocoapods --user-install
-          gem which cocoapods
           pod install
+      - name: Build
+        run: |
           xcodebuild -workspace HelloWorld.xcworkspace -scheme HelloWorld CONFIGURATION_BUILD_DIR=`pwd`/build clean build
       - name: Run
         run: |
