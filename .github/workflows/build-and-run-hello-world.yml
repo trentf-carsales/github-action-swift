@@ -21,7 +21,7 @@ jobs:
           gem install cocoapods --user-install
           gem which cocoapods
           pod install
-          xcodebuild -workspace HelloWorld.xcworkspace -scheme HelloWorld CONFIGURATION_BUILD_DIR=`pwd`/build clean build | xcpretty && exit ${PIPESTATUS[0]}
+          xcodebuild -workspace HelloWorld.xcworkspace -scheme HelloWorld CONFIGURATION_BUILD_DIR=`pwd`/build clean build
       - name: Run
         run: |
           build/HelloWorld 
